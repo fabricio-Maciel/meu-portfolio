@@ -5,11 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Fabricio Maciel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rokkitt:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/styles/main.css">
 
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="logotipo">
+        <img src="images/icons/icon-computador.svg" alt="Icone de um computador">
+        <p class="logotipo__text"> &lt;Fabricio Maciel&gt; </p>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__item">
+            <a href="#sobre" class="nav__list__item__link">sobre mim</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="#habilidades" class="nav__list__item__link">habilidades</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="#projetos" class="nav__list__item__link">projetos</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero container">
+      <div class="hero__text">
+        <p class="hero__text__paragrafo">Hello World 🖥️</p>
+        <h1 class="hero__text__title">Desenvolvedor Web <span>Front-End</span></h1>
+        <q class="hero__text__citacao">"Falar é fácil. Mostre-me <a href="">o código</a>." - Linus Torvalds</q>
+        <button class="hero__text__button">
+          <a href="">Currículo</a>
+        </button>
+      </div>
+      <div class="hero__image">
+        <img src="images/ilustracao.svg" alt="Ilustração">
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

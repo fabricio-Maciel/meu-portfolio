@@ -1,0 +1,52 @@
+@use "variaveis";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 16px 140px 16px;
+
+  &__text {
+    color: variaveis.$corDeFundo;
+
+    &__paragrafo {
+      @include variaveis.tipo-2(52);
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      @include variaveis.tipo-1(64);
+      margin-bottom: 16px;
+    }
+
+    &__citacao {
+      @include variaveis.tipo-2(20);
+      display: inline-block;
+      margin-bottom: 38px;
+
+      a {
+        color: variaveis.$corSecundaria;
+        text-decoration: underline;
+      }
+    }
+
+    &__button {
+      @include variaveis.tipo-1(24);
+      padding: 12px 24px;
+      background: linear-gradient(
+        120deg,
+        variaveis.$corSecundaria,
+        variaveis.$corPrimaria
+      );
+      border-radius: 8px;
+
+      a {
+        color: variaveis.$corTexto;
+      }
+
+      &:hover {
+        background: variaveis.$corSecundaria;
+      }
+    }
+  }
+}

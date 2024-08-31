@@ -1,0 +1,88 @@
+// cores
+
+$corDeFundo: #1e1e1e;
+$corPrimaria: #7782f2;
+$corSecundaria: #f277de;
+$corTexto: #fff;
+$corBotao: #7d61e7;
+
+// tipografia
+
+$font-1: "Poppins", sans-serif;
+$font-2: "Rokkitt", arial;
+
+@function em($pixel, $contexto: 16) {
+  @return ($pixel / $contexto) + em;
+}
+
+@mixin tipo-1($size) {
+  font-family: $font-1;
+  @if $size == 64 {
+    font-size: em(64);
+    line-height: em(78, 64);
+    font-weight: 500;
+  } @else if $size == 52 {
+    font-size: em(52);
+    font-weight: 500;
+  } @else if $size == 32 {
+    font-size: em(32);
+    font-weight: 500;
+  } @else if $size == 24 {
+    font-size: em(24);
+    font-weight: 500;
+  } @else if $size == 16 {
+    font-size: em(16);
+    line-height: em(28, 16);
+  } @else if $size == 12 {
+    font-size: em(12);
+  }
+}
+
+@mixin tipo-2($size) {
+  font-family: $font-2;
+  @if $size == 52 {
+    font-size: em(52);
+  } @else if $size == 20 {
+    font-size: em(20);
+  } @else if $size == 16 {
+    font-size: em(16);
+    line-height: em(20, 16);
+  }
+}
+
+// container e media-querie
+$l-device: 1200;
+$m-device: 760;
+$s-device: 480;
+
+// mixin de media-querie
+@mixin dispositivo($size) {
+  @if $size == l {
+    @media screen and (min-width: #{$l-device + px}) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (min-width: #{$m-device + px}) and (max-width: #{$l-device - 1 + px}) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (max-width: #{$m-device - 1 + px}) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  max-width: $l-device + px;
+  margin: 0px auto;
+  @include dispositivo(m) {
+    max-width: $m-device + px;
+  }
+  @include dispositivo(s) {
+    max-width: $s-device + px;
+  }
+}
+
+.container {
+  @include container;
+}

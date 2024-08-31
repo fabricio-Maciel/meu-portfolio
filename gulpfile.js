@@ -8,7 +8,7 @@ function compilaSass() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: "compressed",
+        outputStyle: "expanded",
       })
     )
     .pipe(sourcemaps.write("./maps"))

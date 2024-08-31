@@ -1,3 +1,4 @@
-body {
-  background-color: #fff;
-}
+@use "reset";
+@use "variaveis";
+@use "header";
+@use "hero";
