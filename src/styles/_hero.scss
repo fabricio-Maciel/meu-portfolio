@@ -27,6 +27,10 @@
       a {
         color: variaveis.$corSecundaria;
         text-decoration: underline;
+
+        &:hover {
+          color: variaveis.$corPrimaria;
+        }
       }
     }
 

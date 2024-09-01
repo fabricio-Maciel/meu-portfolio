@@ -2,3 +2,14 @@
 @use "variaveis";
 @use "header";
 @use "hero";
+@use "sobre";
+
+.title {
+  @include variaveis.tipo-1(44);
+  color: variaveis.$corPrimaria;
+
+  &__span {
+    color: variaveis.$corSecundaria;
+    @include variaveis.tipo-1(12);
+  }
+}

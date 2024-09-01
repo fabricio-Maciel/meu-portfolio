@@ -1,0 +1,53 @@
+@use "variaveis";
+
+.sobre {
+  background-color: variaveis.$corDeFundo;
+  color: variaveis.$corTexto;
+
+  &__conteudo {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 100px 16px 120px 16px;
+  }
+
+  &__redes {
+    &__image {
+      width: 100%;
+      display: block;
+      padding-bottom: 32px;
+    }
+
+    &__title {
+      @include variaveis.tipo-1(24);
+      color: variaveis.$corSecundaria;
+      padding-bottom: 20px;
+
+      span {
+        @include variaveis.tipo-1(12);
+        color: variaveis.$corTexto;
+      }
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__text {
+    &__title {
+      text-align: end;
+      padding-bottom: 40px;
+    }
+
+    &__paragrafo {
+      max-width: 50ch;
+      @include variaveis.tipo-1(16);
+
+      &:first-of-type {
+        padding-bottom: 40px;
+      }
+    }
+  }
+}

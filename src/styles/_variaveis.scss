@@ -11,42 +11,42 @@ $corBotao: #7d61e7;
 $font-1: "Poppins", sans-serif;
 $font-2: "Rokkitt", arial;
 
-@function em($pixel, $contexto: 16) {
-  @return ($pixel / $contexto) + em;
+@function rem($pixel, $contexto: 16) {
+  @return ($pixel / $contexto) + rem;
 }
 
 @mixin tipo-1($size) {
   font-family: $font-1;
   @if $size == 64 {
-    font-size: em(64);
-    line-height: em(78, 64);
+    font-size: rem(64);
     font-weight: 500;
-  } @else if $size == 52 {
-    font-size: em(52);
+  } @else if $size == 44 {
+    font-size: rem(44);
     font-weight: 500;
   } @else if $size == 32 {
-    font-size: em(32);
+    font-size: rem(32);
     font-weight: 500;
   } @else if $size == 24 {
-    font-size: em(24);
+    font-size: rem(24);
     font-weight: 500;
   } @else if $size == 16 {
-    font-size: em(16);
-    line-height: em(28, 16);
+    font-size: rem(16);
+    line-height: rem(28, 16);
   } @else if $size == 12 {
-    font-size: em(12);
+    font-size: rem(12);
+    font-weight: 400;
   }
 }
 
 @mixin tipo-2($size) {
   font-family: $font-2;
   @if $size == 52 {
-    font-size: em(52);
+    font-size: rem(52);
   } @else if $size == 20 {
-    font-size: em(20);
+    font-size: rem(20);
   } @else if $size == 16 {
-    font-size: em(16);
-    line-height: em(20, 16);
+    font-size: rem(16);
+    line-height: rem(20, 16);
   }
 }
 
