@@ -1,0 +1,24 @@
+@use "variaveis";
+
+.projetos {
+  padding: 100px 16px 100px 16px;
+  color: variaveis.$corTexto;
+  background-color: variaveis.$corDeFundo;
+  &__title {
+    text-align: end;
+    padding-bottom: 16px;
+  }
+
+  &__paragrafo {
+    text-align: end;
+    @include variaveis.tipo-1(16);
+    padding-bottom: 100px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding: 32px 0;
+  }
+}

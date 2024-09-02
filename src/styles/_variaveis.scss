@@ -42,6 +42,8 @@ $font-2: "Rokkitt", arial;
   font-family: $font-2;
   @if $size == 52 {
     font-size: rem(52);
+  } @else if $size == 28 {
+    font-size: rem(28);
   } @else if $size == 20 {
     font-size: rem(20);
   } @else if $size == 16 {
@@ -51,35 +53,45 @@ $font-2: "Rokkitt", arial;
 }
 
 // container e media-querie
-$l-device: 1200;
-$m-device: 760;
-$s-device: 480;
+$xl-device: 1200;
+$lg-device: 992;
+$md-device: 758;
+$sm-device: 576;
 
 // mixin de media-querie
 @mixin dispositivo($size) {
-  @if $size == l {
-    @media screen and (min-width: #{$l-device + px}) {
+  @if $size == xl {
+    @media screen and (min-width: #{$xl-device + px}) {
       @content;
     }
-  } @else if $size == m {
-    @media screen and (min-width: #{$m-device + px}) and (max-width: #{$l-device - 1 + px}) {
+  } @else if $size == lg {
+    @media screen and (min-width: #{$lg-device + px}) and (max-width: #{$xl-device - 1 + px}) {
       @content;
     }
-  } @else if $size == s {
-    @media screen and (max-width: #{$m-device - 1 + px}) {
+  } @else if $size == md {
+    @media screen and (min-width: #{$md-device + px}) and (max-width: #{$lg-device - 1 + px}) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media screen and (max-width: #{$md-device - 1 + px}) {
       @content;
     }
   }
 }
 
 @mixin container {
-  max-width: $l-device + px;
+  max-width: $xl-device + px;
   margin: 0px auto;
-  @include dispositivo(m) {
-    max-width: $m-device + px;
+  @include dispositivo(lg) {
+    max-width: $lg-device + px;
   }
-  @include dispositivo(s) {
-    max-width: $s-device + px;
+
+  @include dispositivo(md) {
+    max-width: $md-device + px;
+  }
+
+  @include dispositivo(sm) {
+    max-width: $sm-device + px;
   }
 }
 
