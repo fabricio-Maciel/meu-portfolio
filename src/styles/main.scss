@@ -3,6 +3,7 @@
 @use "header";
 @use "hero";
 @use "sobre";
+@use "habilidade";
 
 .title {
   @include variaveis.tipo-1(44);

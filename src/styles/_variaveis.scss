@@ -12,7 +12,7 @@ $font-1: "Poppins", sans-serif;
 $font-2: "Rokkitt", arial;
 
 @function rem($pixel, $contexto: 16) {
-  @return ($pixel / $contexto) + rem;
+  @return calc($pixel / $contexto) * 1rem;
 }
 
 @mixin tipo-1($size) {
