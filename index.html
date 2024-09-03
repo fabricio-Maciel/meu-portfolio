@@ -20,8 +20,8 @@
         <p class="logotipo__text"> &lt;Fabricio Maciel&gt; </p>
       </div>
       <nav class="nav" id="menu">
-        <button type="button" id="btn-menu"><span class="hamburguer"></span></button>
-        <ul class="nav__list">
+        <button aria-label="Abrir Menu" type="button" id="btn-menu" aria-haspopup="true" aria-controls="menu-hamburguer" aria-expanded="false"><span class="hamburguer"></span></button>
+        <ul class="nav__list" id="menu-hamburguer" role="menu">
           <li class="nav__list__item">
             <a href="#sobre" class="nav__list__item__link">sobre mim</a>
           </li>

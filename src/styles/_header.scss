@@ -82,8 +82,33 @@
     padding: 16px;
   }
   .hamburguer {
-    border-top: 2px solid #fff;
+    border-top: 2px solid variaveis.$corTexto;
     width: 20px;
     display: block;
+  }
+
+  .hamburguer::after,
+  .hamburguer::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: variaveis.$corTexto;
+    margin-top: 5px;
+    transition: 0.7s;
+    position: relative;
+  }
+
+  #menu.active .hamburguer {
+    border-top-color: transparent;
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
   }
 }
