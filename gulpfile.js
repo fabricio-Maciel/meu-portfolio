@@ -15,7 +15,7 @@ function compilaSass() {
     .pipe(gulp.dest("./build/styles"));
 }
 
-exports.sass = compilaSass;
+exports.default = gulp.parallel(compilaSass);
 exports.watch = function () {
   gulp.watch(
     "./src/styles/*.scss",

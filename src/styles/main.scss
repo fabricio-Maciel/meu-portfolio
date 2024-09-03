@@ -15,6 +15,11 @@
     @include variaveis.tipo-1(12);
   }
 }
+@include variaveis.dispositivo(sm) {
+  .title {
+    @include variaveis.tipo-1(32);
+  }
+}
 
 .card {
   background-color: #f7f7f7;
@@ -49,6 +54,25 @@
 }
 
 .btn-primary {
-  background-color: variaveis.$corPrimaria;
+  background-color: variaveis.$corBotao;
   color: variaveis.$corTexto;
+  border: 2px solid variaveis.$corBotao;
+
+  &:hover {
+    background-color: variaveis.$corSecundaria;
+    color: variaveis.$corTexto;
+    border: 2px solid transparent;
+  }
+}
+
+.btn-secondary {
+  border: 2px solid variaveis.$corBotao;
+  color: variaveis.$corBotao;
+  font-weight: 500;
+
+  &:hover {
+    background-color: variaveis.$corSecundaria;
+    color: variaveis.$corTexto;
+    border: 2px solid transparent;
+  }
 }

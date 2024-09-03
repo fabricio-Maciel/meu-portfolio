@@ -1,7 +1,8 @@
 @use "variaveis";
 
 .skills {
-  padding: 70px 20px 100px 20px;
+  background-color: variaveis.$corTexto;
+  padding: 120px 16px;
 
   &__title {
     padding-bottom: 40px;

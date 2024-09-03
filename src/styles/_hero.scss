@@ -53,4 +53,42 @@
       }
     }
   }
+
+  &__image {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@include variaveis.dispositivo(md) {
+  .hero {
+    &__image {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@include variaveis.dispositivo(sm) {
+  .hero {
+    &__image {
+      display: none;
+    }
+
+    &__text {
+      &__title {
+        @include variaveis.tipo-1(44);
+      }
+
+      &__paragrafo {
+        @include variaveis.tipo-2(28);
+        // padding-top: 23px;
+      }
+
+      &__button {
+        @include variaveis.tipo-1(16);
+      }
+    }
+  }
 }
