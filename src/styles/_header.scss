@@ -58,7 +58,7 @@
   .nav__list {
     display: flex;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 46px);
     top: 93px;
     left: 0;
     height: 0px;
