@@ -34,7 +34,7 @@
         @include variaveis.tipo-1(16);
         display: block;
         color: variaveis.$corTexto;
-        padding: 8px 8px;
+        padding: 8px;
         border: solid 1px variaveis.$corSecundaria;
         border-radius: 8px;
         transition: transform 0.6s ease-out, border 0.6s ease;
@@ -55,11 +55,21 @@
 }
 
 @include variaveis.dispositivo(sm) {
+  .logotipo {
+    &__image {
+      width: 30px;
+      height: auto;
+    }
+    &__text {
+      @include variaveis.tipo-1(16);
+    }
+  }
+
   .nav__list {
     display: flex;
     position: absolute;
     width: calc(100% - 46px);
-    top: 93px;
+    top: 90px;
     left: 0;
     height: 0px;
     padding: 16px 16px 16px 30px;
@@ -69,6 +79,13 @@
     transition: all 0.4s ease-in;
     visibility: hidden;
     overflow-y: hidden;
+
+    &__item {
+      &__link {
+        padding: 8px;
+        @include variaveis.tipo-1(12);
+      }
+    }
   }
 
   #menu.active .nav__list {

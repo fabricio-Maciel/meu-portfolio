@@ -111,8 +111,17 @@
     }
 
     &__hard {
+      &__title {
+        @include variaveis.tipo-1(24);
+      }
       &__list {
         justify-items: center;
+      }
+    }
+
+    &__soft {
+      &__title {
+        @include variaveis.tipo-1(24);
       }
     }
   }
