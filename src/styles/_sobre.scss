@@ -24,6 +24,7 @@
       @include variaveis.tipo-1(24);
       color: variaveis.$corSecundaria;
       padding-bottom: 20px;
+      white-space: nowrap;
 
       span {
         @include variaveis.tipo-1(12);
@@ -34,6 +35,19 @@
     &__icons {
       display: flex;
       justify-content: space-around;
+
+      &__item:nth-child(1):hover {
+        transform: translateY(-5px);
+        transition: transform 0.5s;
+      }
+      &__item:nth-child(2):hover {
+        transform: translateY(-5px);
+        transition: transform 0.5s;
+      }
+      &__item:nth-child(3):hover {
+        transform: translateY(-8px);
+        transition: transform 0.5s;
+      }
     }
   }
 
@@ -49,6 +63,41 @@
 
       &:first-of-type {
         padding-bottom: 40px;
+      }
+    }
+  }
+}
+
+@include variaveis.dispositivo(md) {
+  .sobre {
+    &__conteudo {
+      flex-direction: column-reverse;
+    }
+
+    &__redes {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &__image {
+        max-width: 262px;
+      }
+    }
+  }
+}
+
+@include variaveis.dispositivo(sm) {
+  .sobre {
+    &__conteudo {
+      flex-direction: column-reverse;
+    }
+
+    &__redes {
+      flex-direction: column;
+      align-items: center;
+
+      &__image {
+        max-width: 262px;
       }
     }
   }

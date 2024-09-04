@@ -103,3 +103,17 @@
     }
   }
 }
+
+@include variaveis.dispositivo(sm) {
+  .skills {
+    &__conteudo {
+      flex-direction: column;
+    }
+
+    &__hard {
+      &__list {
+        justify-items: center;
+      }
+    }
+  }
+}
