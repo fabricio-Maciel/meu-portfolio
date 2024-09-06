@@ -25,9 +25,10 @@
   background-color: #f7f7f7;
   color: variaveis.$corDeFundo;
   border-radius: 8px;
-  display: inline-block;
-  max-width: 350px;
-  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  transition: 0.35s;
 
   &__image {
     max-width: 100%;
@@ -44,6 +45,7 @@
     @include variaveis.tipo-1(16);
     padding: 24px;
     max-width: 50ch;
+    margin-bottom: auto;
   }
 
   &__buttons {
@@ -62,7 +64,7 @@
 
 @include variaveis.dispositivo(sm) {
   .card {
-    max-width: 300px;
+    min-width: 300px;
 
     &__paragrafo {
       @include variaveis.tipo-1(12);
@@ -99,4 +101,17 @@
     color: variaveis.$corTexto;
     border: 2px solid transparent;
   }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  transition: all 2s;
+  filter: blur(0px);
+  transform: translateX(0);
 }

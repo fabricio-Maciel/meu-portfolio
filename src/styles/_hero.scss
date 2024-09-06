@@ -12,6 +12,9 @@
     &__paragrafo {
       @include variaveis.tipo-2(52);
       margin-bottom: 20px;
+      border-right: 3px solid;
+      display: inline-block;
+      animation: blink 0.8s infinite;
     }
 
     &__title {
@@ -57,6 +60,7 @@
   &__image {
     max-width: 100%;
     display: block;
+    animation: move-ilustracao 2s ease-in 0s infinite alternate;
   }
 }
 
@@ -90,5 +94,26 @@
         @include variaveis.tipo-1(16);
       }
     }
+  }
+}
+
+// Animação da Ilustração do hero
+@keyframes move-ilustracao {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+// Animação do cursor piscando
+@keyframes blink {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
   }
 }
