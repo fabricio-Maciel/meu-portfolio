@@ -29,3 +29,23 @@ const myObserver = new IntersectionObserver((entries) => {
 });
 
 elements.forEach((elements) => myObserver.observe(elements));
+// Fim Itens aparecendo com o scroll
+
+// botão de scroll para o topo
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const topBtn = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // Para Safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+}

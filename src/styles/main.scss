@@ -115,3 +115,17 @@
   filter: blur(0px);
   transform: translateX(0);
 }
+
+#back-to-top {
+  position: fixed;
+  display: none;
+  background-color: variaveis.$corPrimaria;
+  color: white;
+  z-index: 1000;
+  bottom: 20px;
+  right: 30px;
+  padding: 20px 27px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  @include variaveis.tipo-1(16);
+}
