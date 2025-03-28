@@ -1,10 +1,9 @@
-const btnMenu = document.getElementById("btn-menu");
-
 // Menu hamburguer
+const btnMenu = document.getElementById("btn-menu");
 function toggleMenu(event) {
   const nav = document.getElementById("menu");
-  nav.classList.toggle("active");
   const active = nav.classList.contains("active");
+  nav.classList.toggle("active");
   event.currentTarget.setAttribute("aria-expanded", active);
   if (active) {
     event.currentTarget.setAttribute("aria-label", "Fechar menu");
